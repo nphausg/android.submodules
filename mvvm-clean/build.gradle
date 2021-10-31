@@ -5,16 +5,16 @@ plugins {
     id 'kotlin-kapt'
 }
 
-apply from: 'deps/di_dependencies.gradle'
-apply from: 'deps/store_dependencies.gradle'
-apply from: 'deps/test_dependencies.gradle'
-apply from: 'deps/shared_dependencies.gradle'
-apply from: 'deps/glide_dependencies.gradle'
-apply from: 'deps/network_dependencies.gradle'
-apply from: 'deps/compose_dependencies.gradle'
-apply from: 'deps/lifecycle_dependencies.gradle'
-apply from: 'deps/navigation_dependencies.gradle'
-apply from: 'deps/coroutines_dependencies.gradle'
+apply from: '../deps/di_dependencies.gradle'
+apply from: '../deps/store_dependencies.gradle'
+apply from: '../deps/test_dependencies.gradle'
+apply from: '../deps/shared_dependencies.gradle'
+apply from: '../deps/glide_dependencies.gradle'
+apply from: '../deps/network_dependencies.gradle'
+apply from: '../deps/compose_dependencies.gradle'
+apply from: '../deps/lifecycle_dependencies.gradle'
+apply from: '../deps/navigation_dependencies.gradle'
+apply from: '../deps/coroutines_dependencies.gradle'
 
 android {
 
