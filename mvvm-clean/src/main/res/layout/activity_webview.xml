@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:navigationIcon="@drawable/ic_vector_left"
+        app:navigationIconTint="@android:color/white"
+        app:subtitleCentered="true"
+        app:subtitleTextAppearance="@style/Clean.Theme.Text.Subtitle"
+        app:title="CONNECT MANUALLY"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/Clean.Theme.Text.HeadLine"
+        tools:background="@android:color/black"
+        tools:subtitle="@tools:sample/date/day_of_week" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/margin" />
+
+        <com.nphau.android.shared.ui.widgets.EmptyView
+            android:id="@+id/view_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:f_message="@string/common_error_connect" />
+
+    </FrameLayout>
+
+</LinearLayout>

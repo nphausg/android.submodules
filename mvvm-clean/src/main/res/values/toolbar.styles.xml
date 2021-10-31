@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Clean.Theme.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="titleCentered">true</item>
+        <item name="fontFamily">@font/font_medium</item>
+        <item name="android:fontFamily">@font/font_medium</item>
+        <item name="titleTextStyle">@style/Clean.Theme.Text.HeadLine</item>
+        <item name="subtitleTextStyle">@style/Clean.Theme.Text.Subtitle</item>
+        <item name="titleTextAppearance">@style/Clean.Theme.Text.HeadLine</item>
+        <item name="materialThemeOverlay">@style/Clean.ThemeOverlay.Toolbar</item>
+        <item name="subtitleTextAppearance">@style/Clean.Theme.Text.Subtitle</item>
+    </style>
+
+    <style name="Clean.ThemeOverlay.Toolbar" parent="">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+    </style>
+
+</resources>

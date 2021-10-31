@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseTheme.BaseText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/textColorSecondary</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="Clean.Theme.Text" parent="BaseTheme.BaseText">
+        <item name="android:fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="Clean.Theme.Text.HeadLine" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:fontFamily">@font/font_medium</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+        <item name="fontFamily">@font/font_medium</item>
+    </style>
+
+    <style name="Clean.Theme.Text.Subtitle" parent="TextAppearance.AppCompat.Widget.ActionMode.Subtitle">
+        <item name="android:fontFamily">@font/font_regular</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+        <item name="fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="Clean.Theme.Text.Bold" parent="BaseTheme.BaseText">
+        <item name="android:fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="Clean.Theme.Text.Italic" parent="BaseTheme.BaseText">
+        <item name="android:fontFamily">@font/font_italic</item>
+    </style>
+
+    <style name="Clean.Theme.Text.Medium" parent="BaseTheme.BaseText">
+        <item name="android:fontFamily">@font/font_medium</item>
+    </style>
+
+    <style name="Clean.Theme.Tab.Text" parent="Clean.Theme.Text.Medium">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>

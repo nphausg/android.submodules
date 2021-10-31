@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- <WHAT>_<WHERE>_<SIZE> -->
+<resources>
+
+    <!--Icon-->
+    <dimen name="icon_size_micro">4dp</dimen>
+    <dimen name="icon_size">8dp</dimen>
+    <dimen name="icon_size_medium">16dp</dimen>
+    <dimen name="icon_size_large">24dp</dimen>
+    <dimen name="icon_size_x4">32dp</dimen>
+    <dimen name="icon_size_x5">40dp</dimen>
+    <dimen name="icon_size_x6">48dp</dimen>
+    <dimen name="icon_size_x7">56dp</dimen>
+    <dimen name="icon_size_x8">64dp</dimen>
+    <dimen name="icon_size_x9">72dp</dimen>
+    <dimen name="size_icon_x10">90dp</dimen>
+    <dimen name="size_icon_x11">88dp</dimen>
+
+    <!--Bottom Sheet-->
+    <dimen name="bottom_sheet_corner_radius">8dp</dimen>
+    <dimen name="bottom_sheet_corner_radius_large">16dp</dimen>
+    <dimen name="bottom_sheet_top_padding">8dp</dimen>
+
+    <!--Button-->
+    <dimen name="button_corner_micro">16dp</dimen>
+    <dimen name="button_corner">30dp</dimen>
+    <dimen name="form_corner">8dp</dimen>
+
+    <!--Input-->
+    <dimen name="input_border_radius">30dp</dimen>
+    <!--Cast-->
+    <dimen name="cast_photo_dimension">104dp</dimen>
+    <dimen name="cast_album_dimension">128dp</dimen>
+
+    <!--Margin-->
+    <dimen name="margin_unit">1dp</dimen>
+    <dimen name="margin_micro">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+
+    <dimen name="spacing_micro">48dp</dimen>
+    <dimen name="spacing">72dp</dimen>
+
+    <dimen name="text_size_micro">8sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_h1">20sp</dimen>
+    <dimen name="text_size_h2">24sp</dimen>
+    <dimen name="text_size_h3">32sp</dimen>
+    <dimen name="text_size_h4">48sp</dimen>
+    <dimen name="text_size_h5">56sp</dimen>
+    <dimen name="text_size_h6">64sp</dimen>
+
+    <dimen name="image_size_micro">96dp</dimen>
+    <dimen name="image_size">128dp</dimen>
+    <dimen name="image_size_medium">164dp</dimen>
+    <dimen name="image_size_large">192dp</dimen>
+    <dimen name="image_size_h1">256dp</dimen>
+
+
+</resources>

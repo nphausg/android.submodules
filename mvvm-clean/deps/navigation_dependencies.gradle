@@ -1,0 +1,7 @@
+dependencies {
+    api('androidx.navigation:navigation-ui-ktx:2.3.5') {
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib'
+    }
+    api 'androidx.navigation:navigation-runtime-ktx:2.3.5'
+    api 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+}

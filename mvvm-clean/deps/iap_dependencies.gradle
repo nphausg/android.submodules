@@ -1,0 +1,3 @@
+dependencies {
+    implementation "com.android.billingclient:billing-ktx:4.0.0"
+}

@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+apply from: 'deps/di_dependencies.gradle'
+apply from: 'deps/store_dependencies.gradle'
+apply from: 'deps/test_dependencies.gradle'
+apply from: 'deps/shared_dependencies.gradle'
+apply from: 'deps/glide_dependencies.gradle'
+apply from: 'deps/network_dependencies.gradle'
+apply from: 'deps/compose_dependencies.gradle'
+apply from: 'deps/lifecycle_dependencies.gradle'
+apply from: 'deps/navigation_dependencies.gradle'
+apply from: 'deps/coroutines_dependencies.gradle'
+
+android {
+
+    defaultConfig {
+        buildConfigField "String", "MODULE_NAME", LIB_NAME
+        buildConfigField "String", "MODULE_VERSION", "\"${LIB_VERSION}\""
+        buildConfigField "String", "COMPANY_NAME", LIB_COMPANY_NAME
+    }
+
+}

@@ -1,0 +1,110 @@
+android {
+
+    compileSdk build_versions.target_sdk
+
+    defaultConfig {
+        minSdk build_versions.min_sdk
+        targetSdk build_versions.target_sdk
+        resConfigs "en", "vi"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError true
+    }
+    // For kotlin debug
+    kapt {
+        javacOptions {
+            option("-Xmaxerrs", 2000)
+        }
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+        useIR = true
+    }
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
+    packagingOptions {
+        // Jackson XML
+        pickFirst 'META-INF/services/javax.xml.stream.XMLInputFactory'
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+dependencies {
+
+    // Android X
+    implementation deps.support.material
+    implementation deps.support.swipelayout
+    implementation deps.support.app_compat
+    implementation deps.support.fragment_ktx
+
+    // Kotlin
+    api deps.kotlin.stdlib
+    api(deps.support.core_ktx) {
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib'
+        exclude group: 'androidx.annotation', module: 'annotation'
+        exclude group: 'androidx.core', module: 'core'
+    }
+
+    // Navigation
+
+    implementation deps.arch_core.runtime
+
+    // androidx.paging
+    api deps.paging_ktx
+    api deps.paging_common
+    api deps.paging_rxjava2
+
+    api deps.jakewharton.rxbinding3
+    api deps.preference.ktx
+
+    // RxJava3
+    api deps.rxjava3
+    api deps.rxandroid3
+
+    // LOGGER: Timber
+    api deps.timber
+
+    // Work manager
+    api(deps.work.runtime_ktx) {
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+
+    // Multi dex
+    api deps.multidex
+
+    // Permissions
+    api(deps.permissionsdispatcher) {
+        exclude group: 'androidx.core', module: 'core'
+        exclude group: 'androidx.fragment', module: 'fragment'
+        exclude group: 'androidx.collection', module: 'collection'
+    }
+    kapt deps.permissionsdispatcher_processor
+    // Shimmer loading
+    api 'com.facebook.shimmer:shimmer:0.5.0'
+    // markdown
+    api 'org.jetbrains:markdown:0.2.1'
+}
