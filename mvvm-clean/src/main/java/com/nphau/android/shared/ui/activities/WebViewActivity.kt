@@ -51,7 +51,7 @@ class WebViewActivity : BindingActivity<ActivityWebviewBinding>() {
 
     override fun onSyncData() {
         super.onSyncData()
-        val url = intent.getStringExtra(KEY_URL) ?: "https://fiisionstudio.com/privacy-policy"
+        val url = intent.getStringExtra(KEY_URL) ?: "https://nphau.medium.com/"
         val title = intent.getStringExtra(KEY_TITLE) ?: getString(R.string.common_owner)
         with(binding) {
             toolBar.title = title
