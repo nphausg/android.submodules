@@ -39,12 +39,35 @@ class WebViewActivity : BindingActivity<ActivityWebviewBinding>() {
     override fun onSyncViews(savedInstanceState: Bundle?) {
         super.onSyncViews(savedInstanceState)
         with(binding) {
-            webView.webChromeClient = BrowserWebClient()
-            webView.webViewClient = object : WebViewClient() {
-                override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-                    view.loadUrl(url)
-                    return true
+            with(webView) {
+                webChromeClient = BrowserWebClient()
+                webViewClient = object : WebViewClient() {
+                    override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
+                        view.loadUrl(url)
+                        return true
+                    }
                 }
+                isVerticalScrollBarEnabled = true
+                isHorizontalScrollBarEnabled = true
+            }
+
+            // Settings
+            with(webView.settings) {
+                defaultTextEncodingName = "utf-8"
+                javaScriptEnabled = true
+                loadsImagesAutomatically = true
+                setSupportZoom(true)
+                useWideViewPort = false
+                builtInZoomControls = true
+                loadWithOverviewMode = true
+                displayZoomControls = false
+
+                // Storage
+                domStorageEnabled = true
+                val appCachePath = webView.context.cacheDir.absolutePath
+                setAppCachePath(appCachePath)
+                allowFileAccess = true
+                setAppCacheEnabled(true)
             }
         }
     }
@@ -52,7 +75,7 @@ class WebViewActivity : BindingActivity<ActivityWebviewBinding>() {
     override fun onSyncData() {
         super.onSyncData()
         val url = intent.getStringExtra(KEY_URL) ?: "https://nphau.medium.com/"
-        val title = intent.getStringExtra(KEY_TITLE) ?: getString(R.string.common_owner)
+        val title = intent.getStringExtra(KEY_TITLE) ?: ""
         with(binding) {
             toolBar.title = title
             toolBar.setNavigationOnClickListener { finish() }

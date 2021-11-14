@@ -7,7 +7,7 @@
     </style>
 
     <style name="Clean.Theme.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/billing_radio_button_tint</item>
+        <item name="buttonTint">@color/radio_button_tint</item>
         <item name="android:button">@drawable/billing_radio_button</item>
         <item name="materialThemeOverlay">@style/Clean.ThemeOverlay.RadioButton</item>
     </style>
