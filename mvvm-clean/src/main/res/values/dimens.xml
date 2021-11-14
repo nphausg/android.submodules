@@ -12,8 +12,8 @@
     <dimen name="icon_size_x7">56dp</dimen>
     <dimen name="icon_size_x8">64dp</dimen>
     <dimen name="icon_size_x9">72dp</dimen>
-    <dimen name="size_icon_x10">90dp</dimen>
-    <dimen name="size_icon_x11">88dp</dimen>
+    <dimen name="icon_size_x10">90dp</dimen>
+    <dimen name="icon_size_x11">88dp</dimen>
 
     <!--Bottom Sheet-->
     <dimen name="bottom_sheet_corner_radius">8dp</dimen>

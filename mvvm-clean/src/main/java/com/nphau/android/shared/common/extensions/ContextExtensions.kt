@@ -11,6 +11,7 @@ import android.app.ActivityManager
 import android.app.Application
 import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
 import android.content.res.TypedArray
 import android.net.Uri
 import android.util.AttributeSet

@@ -32,11 +32,20 @@ object TimeUtils {
         return (diff / 86400000).toInt()
     }
 
+    fun diffDays(dateFromInMillis: Long, dateToInMillis: Long): Int {
+        val diff: Long = dateFromInMillis - dateToInMillis
+        return (diff / 86400000).toInt()
+    }
+
     fun addDays(date: Date, days: Int): Date {
         val c = Calendar.getInstance()
         c.time = date
         c.add(Calendar.DAY_OF_YEAR, days)
         return c.time
+    }
+
+    fun isToday(timestamp: Long): Boolean {
+        return diffDays(timestamp, System.currentTimeMillis()) == 0
     }
 
     fun getTimeAgo(timeUnit: Long?): String? {

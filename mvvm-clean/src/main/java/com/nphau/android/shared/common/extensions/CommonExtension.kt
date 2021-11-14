@@ -47,4 +47,13 @@ fun String.toHTML(): Spanned {
         .fromHtml(this, HtmlCompat.FROM_HTML_MODE_LEGACY)
 }
 
+fun String.lastWord(): String {
+    if (isNotEmpty()) {
+        val arrayOfWords = split(" ")
+        if (arrayOfWords.isNotEmpty())
+            return arrayOfWords[arrayOfWords.size - 1]
+    }
+    return ""
+}
+
 infix fun <T> T?.or(default: T): T = this ?: default

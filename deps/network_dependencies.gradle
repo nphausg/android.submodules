@@ -1,11 +1,20 @@
 dependencies {
+
+    // Client
     api "io.ktor:ktor-client-gson:1.6.2"
+    api "io.ktor:ktor-client-jackson:1.6.2"
     api "io.ktor:ktor-client-okhttp:1.6.2"
+    api "io.ktor:ktor-client-serialization:1.6.2"
+    api "io.ktor:ktor-client-logging:1.6.2"
+
+    // Server
     api "io.ktor:ktor-server-core:1.6.2"
     api "io.ktor:ktor-server-cio:1.6.2"
+
     api "io.ktor:ktor-websockets:1.6.2"
-    api "io.ktor:ktor-client-logging:1.6.2"
+
     api "com.squareup.okhttp3:logging-interceptor:4.9.2"
+    // Jackson
     api "com.fasterxml.jackson.module:jackson-module-kotlin:2.12.3"
     api "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.12.3"
     api "javax.xml.stream:stax-api:1.0-2"
