@@ -2,7 +2,7 @@
 
 <p align="center">
 <a>
-    <img src="https://img.shields.io/badge/kotlin-v1.5.31-blue.svg">
+    <img src="https://img.shields.io/badge/kotlin-v1.6.0-blue.svg">
     <img src="https://img.shields.io/badge/gradle-6.5-blueviolet.svg">
     <img src="https://img.shields.io/badge/API-21%2B-blue.svg?style=flat">
     <img src="https://img.shields.io/badge/License-Apache%202.0-success.svg">
@@ -29,15 +29,6 @@
 - [Architecture](#architecture)
 - [Case Study](#case-study)
 - [Authors](#authors)
-
-## Architecture Component
-![Screenshot](ims-shared/docs/attach_architecture_component.png)
-
-## Architecture Paging
-![Screenshot](ims-shared/docs/attach_architecture_paging.png)
-
-## Clean Architecture
-![Screenshot](ims-shared/docs/attach_clean_architecture.png)
 
 ## 🌈 Git Flow
 
@@ -150,7 +141,7 @@ We used a Repository layer for handling data operations. FUTA's data comes from 
 
 ### Kotlin
 
-[![made-with-Kotlin](https://img.shields.io/badge/Made%20with-Kotlin.v1.5.31-1f425f.svg)](https://kotlinlang.org/)
+[![made-with-Kotlin](https://img.shields.io/badge/Made%20with-Kotlin.v1.6.0-1f425f.svg)](https://kotlinlang.org/)
 
 We made an early decision to rewrite the app from scratch to bring it in line with our thinking about modern Android architecture. Using Kotlin for the rewrite was an easy choice: we liked Kotlin's expressive, concise, and powerful syntax; we found that Kotlin's support for safety features for nullability and immutability made our code more resilient; and we leveraged the enhanced functionality provided by Android Ktx extensions.
 

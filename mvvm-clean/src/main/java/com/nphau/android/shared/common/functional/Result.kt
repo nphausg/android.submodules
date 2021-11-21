@@ -71,6 +71,7 @@ sealed class Result<out L, out R> {
             is Success -> onSuccess(data)
             is Failure -> onFailure?.invoke(error)
             is Loading -> onLoading?.invoke()
+            else -> {}
         }
     }
 
