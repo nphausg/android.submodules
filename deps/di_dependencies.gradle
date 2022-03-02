@@ -1,10 +1,10 @@
 dependencies {
     // koin
-    implementation "io.insert-koin:koin-core:3.1.2"
-    implementation "io.insert-koin:koin-android:3.1.2"
-    implementation "io.insert-koin:koin-android-compat:3.1.2"
+    implementation "io.insert-koin:koin-core:3.1.5"
+    implementation "io.insert-koin:koin-android:3.1.5"
+    implementation "io.insert-koin:koin-android-compat:3.1.5"
     implementation "io.insert-koin:koin-androidx-workmanager:3.1.2"
     implementation "io.insert-koin:koin-androidx-compose:3.1.2"
-    implementation "io.insert-koin:koin-ktor:3.1.2"
+    implementation "io.insert-koin:koin-ktor:3.1.5"
     implementation "io.insert-koin:koin-logger-slf4j:3.1.2"
 }

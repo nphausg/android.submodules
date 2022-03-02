@@ -55,8 +55,8 @@ android {
 dependencies {
 
     // Android X
-    api 'com.google.android.material:material:1.4.0'
-    api 'androidx.appcompat:appcompat:1.3.1'
+    api 'com.google.android.material:material:1.5.0'
+    api 'androidx.appcompat:appcompat:1.4.1'
 
     // Kotlin
     api deps.kotlin.stdlib
@@ -66,12 +66,14 @@ dependencies {
         exclude group: 'androidx.core', module: 'core'
     }
 
-    api 'androidx.constraintlayout:constraintlayout:2.1.1'
+    api 'androidx.constraintlayout:constraintlayout:2.1.3'
 
     // androidx.paging
     api deps.paging_ktx
     api deps.paging_common
     api deps.paging_rxjava2
+
+    api 'androidx.work:work-runtime-ktx:2.7.1'
 
     api deps.jakewharton.rxbinding3
     api deps.preference.ktx
@@ -82,11 +84,6 @@ dependencies {
 
     // LOGGER: Timber
     api deps.timber
-
-    // Work manager
-    api(deps.work.runtime_ktx) {
-        exclude group: 'com.google.guava', module: 'listenablefuture'
-    }
 
     // Multi dex
     api 'androidx.multidex:multidex:2.0.1'

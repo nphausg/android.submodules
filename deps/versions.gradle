@@ -18,7 +18,7 @@ ext.versions = versions
 
 def build_versions = [:]
 build_versions.min_sdk = 21
-build_versions.target_sdk = 31
+build_versions.target_sdk = 32
 ext.build_versions = build_versions
 
 def preference = [:]
@@ -45,10 +45,6 @@ deps.paging_rxjava2 = "androidx.paging:paging-rxjava2:$versions.paging"
 deps.timber = "com.jakewharton.timber:timber:$versions.timber"
 deps.rxjava3 = "io.reactivex.rxjava3:rxjava:3.0.11"
 deps.rxandroid3 = "io.reactivex.rxjava3:rxandroid:3.0.0"
-
-def work = [:]
-work.runtime_ktx = "androidx.work:work-runtime-ktx:$versions.work"
-deps.work = work
 
 def jakewharton = [:]
 jakewharton.rxbinding3 = "com.jakewharton.rxbinding2:rxbinding-kotlin:2.2.0"
