@@ -16,13 +16,6 @@ apply from: '../deps/lifecycle_dependencies.gradle'
 apply from: '../deps/navigation_dependencies.gradle'
 apply from: '../deps/coroutines_dependencies.gradle'
 
-android {
-
-    defaultConfig {
-        buildConfigField "String", "MODULE_NAME", LIB_NAME
-        buildConfigField "String", "MODULE_VERSION", "\"${LIB_VERSION}\""
-        buildConfigField "String", "COMPANY_NAME", LIB_COMPANY_NAME
-        buildConfigField "boolean", "LIMIT_UNIT_TEST_TIME", "false"
-    }
-
+dependencies {
+    implementation project(path: ':mvvm-shared')
 }
