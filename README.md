@@ -2,8 +2,8 @@
 
 <p align="center">
 <a>
-    <img src="https://img.shields.io/badge/kotlin-v1.6.0-blue.svg">
-    <img src="https://img.shields.io/badge/gradle-6.5-blueviolet.svg">
+    <img src="https://img.shields.io/badge/kotlin-v1.8.0-blue.svg">
+    <img src="https://img.shields.io/badge/gradle-7.4-blueviolet.svg">
     <img src="https://img.shields.io/badge/API-21%2B-blue.svg?style=flat">
     <img src="https://img.shields.io/badge/License-Apache%202.0-success.svg">
     <img src="https://circleci.com/gh/twilio-labs/plugin-rtc.svg?style=svg">
