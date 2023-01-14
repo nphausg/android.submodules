@@ -9,12 +9,10 @@ package sg.nphau.android
 import android.content.Context
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.OnLifecycleEvent
+import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.multidex.MultiDexApplication
-import sg.nphau.android.shared.common.extensions.none
+import io.reactivex.plugins.RxJavaPlugins
 import sg.nphau.android.shared.di.SharedDI
 import sg.nphau.android.shared.libs.LocaleUtils
 import sg.nphau.android.shared.libs.NetworkUtils
@@ -22,19 +20,18 @@ import sg.nphau.android.shared.libs.imageloader.GlideLoader
 import sg.nphau.android.shared.libs.imageloader.ImageLoader
 import sg.nphau.android.shared.libs.logger.DebugLoggingTree
 import sg.nphau.android.shared.libs.logger.ReleaseLoggingTree
-import io.reactivex.plugins.RxJavaPlugins
 import timber.log.Timber
 
-abstract class Launcher : MultiDexApplication(), LifecycleObserver {
+abstract class Launcher : MultiDexApplication(), DefaultLifecycleObserver {
 
     companion object {
         lateinit var appContext: Context
     }
 
     override fun onCreate() {
-        super.onCreate()
+        super<MultiDexApplication>.onCreate()
 
-        sg.nphau.android.Launcher.Companion.appContext = this
+        appContext = this
 
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
 
@@ -64,15 +61,6 @@ abstract class Launcher : MultiDexApplication(), LifecycleObserver {
         super.onConfigurationChanged(newConfig)
         LocaleUtils.initializeWithDefaults(this)
     }
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    protected open fun onApplicationEnterForeground() = none()
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    protected open fun onLifecycleCreate() = none()
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    protected open fun onApplicationEnterBackground() = none()
 
     abstract fun isDebug(): Boolean
 

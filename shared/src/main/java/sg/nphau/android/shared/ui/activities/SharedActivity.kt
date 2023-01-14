@@ -86,7 +86,7 @@ open class SharedActivity : FragmentActivity(), UIBehaviour {
         }
     }
 
-    override fun startActivityForResult(intent: Intent?, requestCode: Int) {
+    override fun startActivityForResult(intent: Intent, requestCode: Int) {
         try {
             super.startActivityForResult(intent, requestCode)
             overridePendingTransitionEnter()

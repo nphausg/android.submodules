@@ -8,7 +8,9 @@ package sg.nphau.android.shared.server
 
 import android.net.Uri
 import android.os.Build
-import sg.nphau.android.Launcher
+import io.ktor.application.call
+import io.ktor.application.install
+import io.ktor.features.CallLogging
 import sg.nphau.android.shared.common.extensions.ioScope
 import sg.nphau.android.shared.common.extensions.tag
 import sg.nphau.android.shared.common.functional.tryOrNull
@@ -17,8 +19,6 @@ import sg.nphau.android.shared.libs.NetworkUtils
 import sg.nphau.android.shared.libs.crypto.decodeBase64
 import sg.nphau.android.shared.libs.crypto.toBase64
 import sg.nphau.android.shared.libs.file.BitmapUtils
-import io.ktor.application.*
-import io.ktor.features.*
 import io.ktor.http.*
 import io.ktor.response.*
 import io.ktor.routing.*
@@ -27,6 +27,7 @@ import io.ktor.websocket.*
 import java.io.File
 import sg.nphau.android.shared.libs.logger.logInfo
 import io.ktor.server.cio.*
+import org.koin.ktor.ext.Koin.Feature.install
 import sg.nphau.android.shared.data.entities.MediaType
 
 /**

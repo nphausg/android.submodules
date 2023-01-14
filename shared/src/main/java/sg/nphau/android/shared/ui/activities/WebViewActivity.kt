@@ -11,7 +11,6 @@ import android.os.Bundle
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import sg.nphau.android.R
 import sg.nphau.android.databinding.ActivityWebviewBinding
 import sg.nphau.android.shared.common.extensions.clearTop
 import sg.nphau.android.shared.common.extensions.gone
@@ -64,10 +63,7 @@ class WebViewActivity : BindingActivity<ActivityWebviewBinding>() {
 
                 // Storage
                 domStorageEnabled = true
-                val appCachePath = webView.context.cacheDir.absolutePath
-                setAppCachePath(appCachePath)
                 allowFileAccess = true
-                setAppCacheEnabled(true)
             }
         }
     }
